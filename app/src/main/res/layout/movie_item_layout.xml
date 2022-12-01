@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+<variable
+    name="data"
+    type="com.app.moviedemo.data.model.Search" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+
+            android:id="@+id/image"
+            loadImage="@{data.Poster}"
+            android:layout_width="150dp"
+            android:scaleType="fitXY"
+            android:layout_height="100dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/image"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/image"
+            android:hint="Title"
+            android:text="@{data.title}"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTv"
+            android:layout_alignStart="@id/titleTv"
+            android:hint="1998"
+            android:text="@{data.Year}" />
+
+    </RelativeLayout>
+</layout>
